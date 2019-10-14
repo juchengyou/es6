@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		<script type="text/javascript">
+//			var obj={userName:"guo"};
+//			obj=JSON.stringify(obj);
+//			console.log(obj);
+//			console.log(typeof obj);
+//			
+//			obj=JSON.parse(obj);
+//			console.log(obj)
+//			console.log(typeof obj);
+//			
+			
+			
+			
+			
+//			var obj={username:"damu",age:30};
+//			var obj1={};
+//			obj1=Object.create(obj,{
+//				sex:{
+//					value:"女",
+//					writable:true,
+//					configurable:true,
+//					enumerable:true
+//				}
+//			});
+//			console.log(obj1.sex);
+//			obj1.sex="nan";
+//			console.log(obj1.sex);
+////			delete obj1.sex;
+//			console.log(obj1)
+//			
+//			for (var i in obj1) {
+//				console.log(i)
+//			}
+
+
+
+//			var obj2={firstName:"guo",lastName:"lihua"};
+//			Object.defineProperties(obj2,{
+//				fullName:{
+//					get:function(){
+//						return this.firstName+" "+this.lastName
+//					},
+//					set:function(data){
+//						console.log('set()',data);
+//						var names=data.split(' ');
+//						this.firstName=names[0];
+//						this.lastName=names[1];
+//						
+//					}
+//				}
+//			})
+//			console.log(obj2);
+//			obj2.fullName="wen baikai";
+//			console.log(obj2);
+//			
+			
+			
+			
+//			let obj={username:"guo",age:30};
+//			let {username,age}=obj;
+//			console.log(username,age);
+//			
+//			
+//			let arr=[1,2,'3','4','5'];
+////			let [a,b,c,d,e]=arr;
+////			console.log(a,b,c,d,e);
+//			let [,,c,d,e]=arr;
+//			console.log(c,d,e);
+//			
+			
+			
+//			let obj={username:"guo",age:10};
+//			let str="我的名字叫："+obj.username+"我的年龄是："+obj.age;
+//			console.log(str);
+//			let str1=`我的名字叫：${obj.username},我的年龄是：${obj.age}`;
+//			console.log(str1)
+
+
+
+////			对象的简写模式
+//			let username="guo";
+//			let age=10;
+////			let obj={
+////				username:username,
+////				age:age
+////			};
+//			let obj={
+//				username,
+//				age,
+//				getName(){
+//					return username
+//				}
+//			};
+//			console.log(obj);
+//			console.log(obj.getName());
+			
+			
+//			
+////			三点运算符			
+//			function foo(...value){
+//				console.log(arguments);
+//				console.log(value);				
+////				arguments.callee()
+//				value.forEach(function(item,index){
+//					console.log(item,index)
+//				})
+//			}
+//			foo(2,65);
+//			let arr=[1,3];
+//			let arr2=[1,...arr,4];
+//			console.log(arr2);
+//			console.log(...arr2)
+			
+			
+			
+////			形参默认值
+//			function Point(x,y){
+//				this.x=x;
+//				this.y=y;
+//			}
+//			let point=new Point(3,5);
+//			console.log(point)
+			
+			
+			
+////			symbol
+//			var symbol=Symbol();
+//			console.log(symbol);
+//			let obj={username:"guo",age:10};
+////			obj.sex="girl";
+////			console.log(obj)
+//			obj[symbol]="boy";
+//			console.log(obj);
+//			let symple1=Symbol('one');
+//			let symple2=Symbol('two');
+//			console.log(symple1,symple2)
+//			
+
+
+
+
+
+//			iteraor接口机制
+			function myIntrator(arr){
+				let nextIndex=0;
+				return {
+					next:function(){
+						return nextIndex<arr.length?{value:arr[nextIndex++],done:false}:{value:arr[nextIndex++],done:true};
+					}
+				}
+			}
+			let arr=[1,4,65,'abc'];
+			let iteratorObj=myIntrator(arr);
+			console.log(iteratorObj.next());
+			console.log(iteratorObj.next());
+			console.log(iteratorObj.next());
+			console.log(iteratorObj.next());
+			console.log(iteratorObj.next());
+			console.log(iteratorObj.next());
+			
+			for(let i of arr){
+				console.log(i)
+			};
+			let str="hello";
+			for (let i of str) {
+				console.log(i)
+			};
+			
+			function fun(){
+				for (let i of arguments) {
+					console.log(i)
+				}
+			};
+			fun(1,'a','abc')
+			
+		</script>
+	</body>
+</html>
